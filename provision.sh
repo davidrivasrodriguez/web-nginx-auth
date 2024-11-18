@@ -167,8 +167,14 @@ server {
     }
 
     location /assets/pages/competitionsPage.html {
-        deny 192.168.57.1;
-        allow all;
+        satisfy all;
+
+        allow 192.168.57.1;
+        deny all;
+
+        auth_basic "Restricted Area";
+        auth_basic_user_file /etc/nginx/.htpasswd;
+
         try_files \$uri \$uri/ =404;
     }
 
