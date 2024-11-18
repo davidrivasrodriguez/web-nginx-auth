@@ -162,7 +162,13 @@ server {
     index index.html index.htm;
     server_name rockclimbing;
 
-    location / {
+    location / {         
+        try_files \$uri \$uri/ =404;
+    }
+
+    location /assets/pages/competitionsPage.html {
+        deny 192.168.57.1;
+        allow all;
         try_files \$uri \$uri/ =404;
     }
 
