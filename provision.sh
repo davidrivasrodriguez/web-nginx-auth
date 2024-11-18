@@ -163,8 +163,6 @@ server {
     server_name rockclimbing;
 
     location / {
-        # auth_basic "Restricted Area";
-        # auth_basic_user_file /etc/nginx/.htpasswd;
         try_files \$uri \$uri/ =404;
     }
 
