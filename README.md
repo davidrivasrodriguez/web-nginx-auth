@@ -1,1 +1,1 @@
-![Exercises Proofs](Autenticacion en Nginx 2.2.pdf)
+<img src"Autenticacion en Nginx 2.2.pdf" alt="Exercises Proofs">
